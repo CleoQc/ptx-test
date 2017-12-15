@@ -1,0 +1,79 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables></variables>
+  <block type="lists_create_with" id="N`4g;?TdzFn[Ep~fK$W7" disabled="true" x="262" y="0">
+    <mutation items="2"></mutation>
+    <value name="ADD0">
+      <shadow type="text" id="rUwlp?fS;JF6!8KO~[t.">
+        <field name="TEXT"></field>
+      </shadow>
+    </value>
+    <value name="ADD1">
+      <shadow type="text" id=";TfWjDQL{_!Kp1Ws#GBE">
+        <field name="TEXT"></field>
+      </shadow>
+    </value>
+  </block>
+  <block type="pxt-on-start" id="b,9W]{}pK(a.g)?VM[np" x="0" y="83">
+    <statement name="HANDLER">
+      <block type="basic_show_icon" id="4y%$N?#|@F*4TZbz7v.c">
+        <field name="i">IconNames.Diamond</field>
+        <next>
+          <block type="dex_i2c_writenumber" id="hdtn:Cm+K=XuQw0AjXc#">
+            <field name="format">NumberFormat.Int8LE</field>
+            <value name="address">
+              <shadow type="math_number" id=".!#clT@A%}Z!EZQ-D(L3">
+                <field name="NUM">40</field>
+              </shadow>
+            </value>
+            <value name="register">
+              <shadow type="math_number" id="ICQbexaH`,`_K3N83`5=">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+            <value name="value">
+              <shadow type="math_number" id="(DE!zZkf*QJi*L]`bW_a">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+            <value name="repeat">
+              <shadow type="logic_boolean" id="qLgVPhlO$%#|}b.bk?~!">
+                <field name="BOOL">FALSE</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="basic_show_icon" id="sbOX$AQasWSU3R?TyC1j">
+                <field name="i">IconNames.SmallDiamond</field>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="lists_create_with" id="`I,)JQ_wOtHkwl%0CDOM" disabled="true" x="386" y="166">
+    <mutation items="1"></mutation>
+    <value name="ADD0">
+      <shadow type="math_number" id="sp:FXrmkUnB4xCtp(5su">
+        <field name="NUM">0</field>
+      </shadow>
+    </value>
+  </block>
+  <block type="i2c_writenumber" id="@}fjVQ1eJ*(|{B0)sbH!" disabled="true" x="710" y="435">
+    <field name="format">NumberFormat.Int8LE</field>
+    <value name="address">
+      <shadow type="math_number" id="e(@z{F+.)`THIv)sBo09">
+        <field name="NUM">0</field>
+      </shadow>
+    </value>
+    <value name="value">
+      <shadow type="math_number" id="1hJgs:xHfpEvyW_s8s9j">
+        <field name="NUM">0</field>
+      </shadow>
+    </value>
+    <value name="repeat">
+      <shadow type="logic_boolean" id="qNNIAm@=mKdL#=qz~v!2">
+        <field name="BOOL">FALSE</field>
+      </shadow>
+    </value>
+  </block>
+</xml>
