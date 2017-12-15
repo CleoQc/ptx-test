@@ -1,5 +1,5 @@
 {
-    "name": "first_i2c",
+    "name": "mybot",
     "dependencies": {
         "core": "*",
         "radio": "*",
