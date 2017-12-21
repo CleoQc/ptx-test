@@ -2,9 +2,7 @@
     "name": "pivotpi",
     "dependencies": {
         "core": "*",
-        "radio": "*",
-        "bitbot": "github:srs/pxt-bitbot#v0.4.1",
-        "neopixel": "github:microsoft/pxt-neopixel#v0.3.4"
+        "radio": "*"
     },
     "description": "",
     "files": [
