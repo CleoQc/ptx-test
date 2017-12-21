@@ -2,6 +2,7 @@ let INVRT = 0x10;
 let OUTDRV = 0x04;
 let MODE1 = 0x00;
 let MODE2 = 0x01;
+let PRESCALE_MODE = 0xFE
 let ALLCALL = 0x01;
 let ALL_LED_ON_L = 0xFA;
 let ALL_LED_ON_H = 0xFB;
@@ -18,7 +19,7 @@ enum on_off {
     //% block=on
     on = 1,
     //% block=half
-    half = 2.0
+    half = 2
 }
 
 //% weight=50 color=#4593CF icon=""
@@ -30,15 +31,15 @@ namespace pivotpi {
             let prescale = 101;  // setting Hz to 60
             let oldmode = pins.i2cReadBuffer(MODE1, 8);
             let oldmodenumber = oldmode.getNumber(8, 0)
-            basic.showNumber(oldmodenumber)
-            basic.pause(1000);
             let newmodenumber = (oldmodenumber & 0x7F) | 0x10    // sleep
-            // // self._device.write8(MODE1, newmode) // go to sleep
-            // // self._device.write8(PRESCALE, prescale)
-            // // self._device.write8(MODE1, oldmode)
-            // // TODO: set prescale as in PCA9685 lines 97
+            write8(MODE1, newmodenumber) // go to sleep
+            write8(PRESCALE_MODE, prescale)
+            write8(MODE1, oldmodenumber)
+            basic.pause(5) // 5 milliseconds
+            write8(MODE1, oldmodenumber | 0x80)
+
             basic.showNumber(1)
-            write8(MODE2, INVRT | OUTDRV);
+            write8(MODE2, (INVRT | OUTDRV));
             basic.showNumber(2)
             write8(MODE1, ALLCALL);
             basic.showNumber(3)
@@ -55,8 +56,9 @@ namespace pivotpi {
 
     function write8(register: number, value: number) {
         let buf = pins.createBuffer(2)
+        // basic.showNumber(value)
         buf.setNumber(NumberFormat.UInt8LE, 0, register)
-        buf.setNumber(NumberFormat.UInt8LE, 1, value >> 8)
+        buf.setNumber(NumberFormat.UInt8LE, 1, value)
         pins.i2cWriteBuffer(0x40, buf, false);
     }
 
@@ -65,7 +67,7 @@ namespace pivotpi {
         init()
 
         let pwm_to_send = 4095 - pins.map(angle, 0, 180, 150, 600)
-        basic.showNumber(pwm_to_send)
+        // basic.showNumber(pwm_to_send)
         write8(LED0_ON_L + 4 * pos, 0)
         write8(LED0_ON_H + 4 * pos, 0)
         write8(LED0_OFF_L + 4 * pos, pwm_to_send & 0xFF)
@@ -79,8 +81,19 @@ namespace pivotpi {
         // buf[0] = LED0_ON_L + 4 * (pos + 8);
         // buf[1] = 4095 * state;
         // pins.i2cWriteBuffer(0x40, buf, false);
+        if (state == 2) {
+            write8(LED0_ON_L + 4 * (pos + 8), 0);
+            write8(LED0_ON_H + 4 * (pos + 8), 0);
+            write8(LED0_OFF_L + 4 * (pos + 8), 1023 & 0xFF);
+            write8(LED0_OFF_H + 4 * (pos + 8), 1023 >> 8);
+        } else {
+            // basic.showNumber(4095 * state)
+            write8(LED0_ON_L + 4 * (pos + 8), 0);
+            write8(LED0_ON_H + 4 * (pos + 8), 0);
+            write8(LED0_OFF_L + 4 * (pos + 8), (4095 * state) & 0xFF);
+            write8(LED0_OFF_H + 4 * (pos + 8), (4095 * state) >> 8);
+        }
 
-        write8(LED0_ON_L + 4 * (pos + 8), 4095 * state);
     }
 
 }

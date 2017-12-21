@@ -1,62 +1,40 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
   <variables>
-    <variable type="" id="(S5D,+*oLS1#ptdFb`68">index</variable>
+    <variable type="" id="eJk.DpajGCk#+Dv08FKB">index2</variable>
+    <variable type="" id="ynsH^!|2]/a[6F.x{d[!">index3</variable>
+    <variable type="" id="Nmp!x/0ONFLRVs1IT6X7">index4</variable>
+    <variable type="" id="yiJSY`ybXI+XDm3rwa42">index</variable>
+    <variable type="" id="wnwxV#b!G{#Az)a_aEn_">index5</variable>
   </variables>
-  <block type="device_button_event" id="a)LM%b2S_22EWf~gy:zx" x="0" y="5">
+  <block type="device_button_event" id="~83vIXyv__}EQX9fCY#%" x="20" y="20">
     <field name="NAME">Button.A</field>
     <statement name="HANDLER">
-      <block type="controls_simple_for" id="8}wE,7i%C-V((7lWle81">
-        <field name="VAR" id="(S5D,+*oLS1#ptdFb`68" variabletype="">index</field>
-        <value name="TO">
-          <shadow type="math_number" id="*7Onf_kB[3~712oDMx]:">
-            <field name="NUM">7</field>
-          </shadow>
-        </value>
-        <statement name="DO">
-          <block type="dex_turn_led_on_off" id="rDLTrvq_m(GkQYJL*JUO">
-            <field name="state">on_off.half</field>
-            <value name="pos">
-              <shadow type="math_number" id="EcEh]Qot1vMkG/qp9aA9">
-                <field name="NUM">0</field>
-              </shadow>
-              <block type="variables_get" id="L+_a:Uf5+^2o|-/cl,AX">
-                <field name="VAR" id="(S5D,+*oLS1#ptdFb`68" variabletype="">index</field>
-              </block>
-            </value>
-            <next>
-              <block type="device_pause" id="i;(.AsBDJd!^fSsBC)-{">
-                <value name="pause">
-                  <shadow type="math_number" id="U3]^N%_g^JJC5N{|d9p3">
-                    <field name="NUM">100</field>
-                  </shadow>
-                </value>
-              </block>
-            </next>
+      <block type="device_show_number" id=";Us@2?T.b1H2~Eh/~ol7">
+        <value name="number">
+          <block type="typescript_expression" id="5#{gTB9Upb@(3?w=`q.U" editable="false">
+            <field name="EXPRESSION">on_off.half</field>
           </block>
-        </statement>
+        </value>
         <next>
-          <block type="controls_simple_for" id="73;g35qlPcV*C8Cgb.d8">
-            <field name="VAR" id="(S5D,+*oLS1#ptdFb`68" variabletype="">index</field>
+          <block type="controls_simple_for" id="4pX]Rk4_,dX!-nTXQO*8">
+            <field name="VAR" id="eJk.DpajGCk#+Dv08FKB" variabletype="">index2</field>
             <value name="TO">
-              <shadow type="math_number" id="7q$7!eA!#3B86Z,Q+$5|">
+              <shadow type="math_number" id="H*)]/MYFB.40){-=yk#e">
                 <field name="NUM">7</field>
               </shadow>
             </value>
             <statement name="DO">
-              <block type="dex_turn_led_on_off" id="+AuD|y@wm:JIK??^$|Fp">
-                <field name="state">on_off.on</field>
+              <block type="dex_turn_led_on_off" id="kF;FctPo4UtR6|BP@JOZ">
+                <field name="state">on_off.half</field>
                 <value name="pos">
-                  <shadow type="math_number" id="EcEh]Qot1vMkG/qp9aA9">
-                    <field name="NUM">0</field>
-                  </shadow>
-                  <block type="variables_get" id="~qV%wdlgo`y#!+)hASP9">
-                    <field name="VAR" id="(S5D,+*oLS1#ptdFb`68" variabletype="">index</field>
+                  <block type="variables_get" id=".)dC:A|bzxu7HY*L[]+9">
+                    <field name="VAR" id="eJk.DpajGCk#+Dv08FKB" variabletype="">index2</field>
                   </block>
                 </value>
                 <next>
-                  <block type="device_pause" id="q.:lfK`%hwR.9l{LMAAc">
+                  <block type="device_pause" id="c:ft{VB([fZR3RgrUDay">
                     <value name="pause">
-                      <shadow type="math_number" id="h$N^1QcXHGl8t0xJ!R`_">
+                      <shadow type="math_number" id="GV]k5DV@:2sK/Gl2D62a">
                         <field name="NUM">100</field>
                       </shadow>
                     </value>
@@ -65,84 +43,32 @@
               </block>
             </statement>
             <next>
-              <block type="controls_simple_for" id="WQ3bL7Dq]P`*8Y}O/y{k">
-                <field name="VAR" id="(S5D,+*oLS1#ptdFb`68" variabletype="">index</field>
-                <value name="TO">
-                  <shadow type="math_number" id="`{A!f:-|Zj5GwFr8Q,O?">
-                    <field name="NUM">7</field>
-                  </shadow>
-                </value>
-                <statement name="DO">
-                  <block type="dex_turn_led_on_off" id="{Ozn(e?;!7MgE%su$KKM">
-                    <field name="state">on_off.half</field>
-                    <value name="pos">
-                      <shadow type="math_number" id="EcEh]Qot1vMkG/qp9aA9">
-                        <field name="NUM">0</field>
-                      </shadow>
-                      <block type="math_arithmetic" id="$@dxT#0nvq(K4=x+~cJZ">
-                        <field name="OP">MINUS</field>
-                        <value name="A">
-                          <shadow type="math_number" id="E(;l]]o.K,r#Xg,eBivW">
-                            <field name="NUM">7</field>
-                          </shadow>
-                        </value>
-                        <value name="B">
-                          <shadow type="math_number" id="$s`g(Vc_o_Rs2dI|y5E]">
-                            <field name="NUM">0</field>
-                          </shadow>
-                          <block type="variables_get" id="]-)_JaD{%46pyk8FZKRN">
-                            <field name="VAR" id="(S5D,+*oLS1#ptdFb`68" variabletype="">index</field>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                    <next>
-                      <block type="device_pause" id="/f5P(e,mb8w0W|KUEfbD">
-                        <value name="pause">
-                          <shadow type="math_number" id="{!QDkkY.!f+$s}(zZL6=">
-                            <field name="NUM">100</field>
-                          </shadow>
-                        </value>
-                      </block>
-                    </next>
+              <block type="device_show_number" id="El(a)R:/EM`5?WK?-U5W">
+                <value name="number">
+                  <block type="typescript_expression" id="Y8-x6h$Uq_toWmweo]Bi" editable="false">
+                    <field name="EXPRESSION">on_off.on</field>
                   </block>
-                </statement>
+                </value>
                 <next>
-                  <block type="controls_simple_for" id="k94T-TRS3jJ)p.P@)v;.">
-                    <field name="VAR" id="(S5D,+*oLS1#ptdFb`68" variabletype="">index</field>
+                  <block type="controls_simple_for" id="hG7gP];@.%M9KSjQbW@`">
+                    <field name="VAR" id="ynsH^!|2]/a[6F.x{d[!" variabletype="">index3</field>
                     <value name="TO">
-                      <shadow type="math_number" id=".~ZM?xIcgipDDB+2~yoT">
+                      <shadow type="math_number" id="F:bpp0=0o~=brUGg,[c=">
                         <field name="NUM">7</field>
                       </shadow>
                     </value>
                     <statement name="DO">
-                      <block type="dex_turn_led_on_off" id="OH:LCU^,STE=O_=@Jo7L">
-                        <field name="state">on_off.off</field>
+                      <block type="dex_turn_led_on_off" id="Ayk~##%JMqgm,Y{URBV0">
+                        <field name="state">on_off.on</field>
                         <value name="pos">
-                          <shadow type="math_number" id="EcEh]Qot1vMkG/qp9aA9">
-                            <field name="NUM">0</field>
-                          </shadow>
-                          <block type="math_arithmetic" id="t/eur^{iqoWc~L7Kj9L,">
-                            <field name="OP">MINUS</field>
-                            <value name="A">
-                              <shadow type="math_number" id="L7Rfiql2}qP6l|`$T02~">
-                                <field name="NUM">7</field>
-                              </shadow>
-                            </value>
-                            <value name="B">
-                              <shadow type="math_number" id="$s`g(Vc_o_Rs2dI|y5E]">
-                                <field name="NUM">0</field>
-                              </shadow>
-                              <block type="variables_get" id="_H$u6E?Fv2#1o5Z^}C5S">
-                                <field name="VAR" id="(S5D,+*oLS1#ptdFb`68" variabletype="">index</field>
-                              </block>
-                            </value>
+                          <block type="variables_get" id="A6Hp(~0.e}Kt,_/*Ui2Z">
+                            <field name="VAR" id="ynsH^!|2]/a[6F.x{d[!" variabletype="">index3</field>
                           </block>
                         </value>
                         <next>
-                          <block type="device_pause" id="S]jh+!?Gk6C#Wg]]tn}w">
+                          <block type="device_pause" id="hW#10EUIsL5VsmT#E}=$">
                             <value name="pause">
-                              <shadow type="math_number" id="B?^]9GekB0*xN3r6z`^h">
+                              <shadow type="math_number" id="DDtp%~~OXa0u$2.{`)6U">
                                 <field name="NUM">100</field>
                               </shadow>
                             </value>
@@ -150,74 +76,59 @@
                         </next>
                       </block>
                     </statement>
-                  </block>
-                </next>
-              </block>
-            </next>
-          </block>
-        </next>
-      </block>
-    </statement>
-  </block>
-  <block type="device_button_event" id="1i{7mD(Nt$*A?Uc7#gwM" x="496" y="0">
-    <field name="NAME">Button.B</field>
-    <statement name="HANDLER">
-      <block type="pivotpi_servo_angle" id="P{b:I_kM:k}`(y/8]eje">
-        <value name="pos">
-          <shadow type="math_number" id="o~KU-BbD/#~1BFTB^bFS">
-            <field name="NUM">0</field>
-          </shadow>
-        </value>
-        <value name="angle">
-          <shadow type="math_number" id="`bD2Wv)aO{eJ@4d[2@A.">
-            <field name="NUM">0</field>
-          </shadow>
-        </value>
-        <next>
-          <block type="device_pause" id="|[XLsOP?9al|~NqR+LI*">
-            <value name="pause">
-              <shadow type="math_number" id="WC:4pc.73H`I.i0KQW?b">
-                <field name="NUM">100</field>
-              </shadow>
-            </value>
-            <next>
-              <block type="pivotpi_servo_angle" id="yuQD+6q3CcLT@r_,,nN^">
-                <value name="pos">
-                  <shadow type="math_number" id="zV9Dekf|*QQ=3M6=GxVU">
-                    <field name="NUM">0</field>
-                  </shadow>
-                </value>
-                <value name="angle">
-                  <shadow type="math_number" id="PFX)}kk/IUN~2p_S|PDg">
-                    <field name="NUM">90</field>
-                  </shadow>
-                </value>
-                <next>
-                  <block type="device_pause" id="(d#$3+vL/ZPdm)yFJ/Zi">
-                    <value name="pause">
-                      <shadow type="math_number" id="iGz6j0{,;@AgcZ@f;I2}">
-                        <field name="NUM">100</field>
-                      </shadow>
-                    </value>
                     <next>
-                      <block type="pivotpi_servo_angle" id="rW91[8B^m4qUvIk}r0c3">
-                        <value name="pos">
-                          <shadow type="math_number" id="VAjoRy^I]An3TiV;fY)U">
-                            <field name="NUM">0</field>
-                          </shadow>
-                        </value>
-                        <value name="angle">
-                          <shadow type="math_number" id="=XyEjp88|ozz;pzteGX#">
-                            <field name="NUM">180</field>
-                          </shadow>
+                      <block type="device_show_number" id="9we8c[4I#92uSjhqRrZk">
+                        <comment pinned="false" h="80" w="160">basic.showNumber(on_off.half) for (let index = 0; index &lt;= 7; index++) { pivotpi.turn_led_on_off(7 - index, on_off.half) basic.pause(100) }</comment>
+                        <value name="number">
+                          <block type="typescript_expression" id="XKdA*DMx*CkIdlTifdbV" editable="false">
+                            <field name="EXPRESSION">on_off.off</field>
+                          </block>
                         </value>
                         <next>
-                          <block type="device_pause" id="pnSp_pv.QL-nj_A./8:f">
-                            <value name="pause">
-                              <shadow type="math_number" id="*sAqK*a13IoCy{F7KXqk">
-                                <field name="NUM">100</field>
+                          <block type="controls_simple_for" id="+:d{9pv`X#J5D`6c3~SL">
+                            <field name="VAR" id="Nmp!x/0ONFLRVs1IT6X7" variabletype="">index4</field>
+                            <value name="TO">
+                              <shadow type="math_number" id="%vd%.r$tY{$I*Vwb[T:}">
+                                <field name="NUM">7</field>
                               </shadow>
                             </value>
+                            <statement name="DO">
+                              <block type="dex_turn_led_on_off" id="s-4#mp83lrm1@1OfdkQ8">
+                                <field name="state">on_off.off</field>
+                                <value name="pos">
+                                  <block type="math_arithmetic" id="XMJ_t^|#FP^1.|?6^8)[">
+                                    <field name="OP">MINUS</field>
+                                    <value name="A">
+                                      <shadow type="math_number" id="H5Kk]Q;NasCtwhYvLQBQ">
+                                        <field name="NUM">7</field>
+                                      </shadow>
+                                    </value>
+                                    <value name="B">
+                                      <shadow type="math_number">
+                                        <field name="NUM">0</field>
+                                      </shadow>
+                                      <block type="variables_get" id="lMq]B4{D}!Qc~e+o~*XR">
+                                        <field name="VAR" id="Nmp!x/0ONFLRVs1IT6X7" variabletype="">index4</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="device_pause" id="cPbxTGQ`^++!xUc*$UPT">
+                                    <value name="pause">
+                                      <shadow type="math_number" id="(Z_9G35{/;Z|1O~VW?{L">
+                                        <field name="NUM">100</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="basic_show_icon" id="j!~KGDf,ptf6xZK5z[a%">
+                                <field name="i">IconNames.Yes</field>
+                              </block>
+                            </next>
                           </block>
                         </next>
                       </block>
@@ -231,10 +142,139 @@
       </block>
     </statement>
   </block>
-  <block type="pxt-on-start" id="i9F+P8bnVa3i:=}y)_(5" x="533" y="316">
+  <block type="device_button_event" id="%tQ}6Zyf*7/Mc[*)/,eu" x="496" y="20">
+    <field name="NAME">Button.B</field>
     <statement name="HANDLER">
-      <block type="basic_show_icon" id="bQ5Kr?335Vq!*bVhvw]`">
-        <field name="i">IconNames.Yes</field>
+      <block type="device_show_number" id=",HsMGoBKap*?5RE21q.4">
+        <value name="number">
+          <shadow type="math_number" id="E0a}(%Hb^R3a{%Lc}:vv">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="pivotpi_servo_angle" id="?VOr1T!d/Nq-WHHK87i)">
+            <value name="pos">
+              <shadow type="math_number" id="FE[?MeZ[D8s`#oi=%e.`">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+            <value name="angle">
+              <shadow type="math_number" id="7T|noZE%a7]NbZ^b#u=;">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="device_pause" id="K1[TSY-^+#y~Ngy.r2mk">
+                <value name="pause">
+                  <shadow type="math_number" id="t+]-Wt{H@.t|I5ZFt~t{">
+                    <field name="NUM">100</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="device_show_number" id="z;w7atM8WfJwQ|+,8DO2">
+                    <value name="number">
+                      <shadow type="math_number" id="l7@GcS+y3C.s_-y!bGr1">
+                        <field name="NUM">90</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="pivotpi_servo_angle" id="R(+qL-Ugiu9EmQr}Tl|+">
+                        <value name="pos">
+                          <shadow type="math_number" id="U@U=Mn!RknI*A;RFjl$*">
+                            <field name="NUM">0</field>
+                          </shadow>
+                        </value>
+                        <value name="angle">
+                          <shadow type="math_number" id="=$9|J)NdI+|l@nogJB5c">
+                            <field name="NUM">90</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="device_pause" id="vT0UF/jonvwC6:dKo.1o">
+                            <value name="pause">
+                              <shadow type="math_number" id="Ve?S/z?|x{?^qn@pW`@0">
+                                <field name="NUM">100</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="device_show_number" id="i!m/,r$ZzehR,Og(biVw">
+                                <value name="number">
+                                  <shadow type="math_number" id="ecO!BEA~j@0HI@7AIXT4">
+                                    <field name="NUM">180</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="pivotpi_servo_angle" id="B4H6@nHnh_GP*tm6R6my">
+                                    <value name="pos">
+                                      <shadow type="math_number" id="RL8[N1bat?g_X0Z}?vn(">
+                                        <field name="NUM">0</field>
+                                      </shadow>
+                                    </value>
+                                    <value name="angle">
+                                      <shadow type="math_number" id=")=2~#DAS:Vmb12B7(4fb">
+                                        <field name="NUM">180</field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="device_pause" id="NWlBQiB3AUNG#pLPlk{+">
+                                        <value name="pause">
+                                          <shadow type="math_number" id="!mELrB%-}s^Sp`@m%R1}">
+                                            <field name="NUM">100</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="pxt-on-start" id="ZqNeX!@GX(UUCylBfM$-" x="784" y="20">
+    <statement name="HANDLER">
+      <block type="variables_set" id="(L]]L26PY:(j@M2[Cwq+">
+        <field name="VAR" id="yiJSY`ybXI+XDm3rwa42" variabletype="">index</field>
+        <value name="VALUE">
+          <shadow type="math_number" id="8}VQ.VqJm!Q9M?SgfbXn">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="controls_simple_for" id="F(^1JNmvz^FZ?OKBWiL,">
+            <field name="VAR" id="wnwxV#b!G{#Az)a_aEn_" variabletype="">index5</field>
+            <value name="TO">
+              <shadow type="math_number" id="zPBAo[|k!~v2s@,Bf%Lf">
+                <field name="NUM">7</field>
+              </shadow>
+            </value>
+            <statement name="DO">
+              <block type="dex_turn_led_on_off" id="v}36K_s1P6_Sjt5+QoMd">
+                <field name="state">on_off.off</field>
+                <value name="pos">
+                  <block type="variables_get" id="n3Aw_$Rm]:waz8T2bE*o">
+                    <field name="VAR" id="wnwxV#b!G{#Az)a_aEn_" variabletype="">index5</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <next>
+              <block type="basic_show_icon" id="]~n[x9T4Nye?1f5Zi{Lj">
+                <field name="i">IconNames.Yes</field>
+              </block>
+            </next>
+          </block>
+        </next>
       </block>
     </statement>
   </block>
