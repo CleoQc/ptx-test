@@ -1,5 +1,5 @@
 {
-    "name": "mybot",
+    "name": "pivotpi",
     "dependencies": {
         "core": "*",
         "radio": "*",
