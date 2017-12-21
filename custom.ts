@@ -38,17 +38,17 @@ namespace pivotpi {
             basic.pause(5) // 5 milliseconds
             write8(MODE1, oldmodenumber | 0x80)
 
-            basic.showNumber(1)
+            // basic.showNumber(1)
             write8(MODE2, (INVRT | OUTDRV));
-            basic.showNumber(2)
+            // basic.showNumber(2)
             write8(MODE1, ALLCALL);
-            basic.showNumber(3)
+            // basic.showNumber(3)
             write8(ALL_LED_ON_L, 0);
-            basic.showNumber(4)
+            // basic.showNumber(4)
             write8(ALL_LED_ON_H, 0);
-            basic.showNumber(5)
+            // basic.showNumber(5)
             write8(ALL_LED_OFF_L, 0);
-            basic.showNumber(6)
+            // basic.showNumber(6)
             write8(ALL_LED_OFF_H, 0);
         }
         init_done = true;
